@@ -1,0 +1,22 @@
+<div class="equation-container">
+    <div>
+        {{number1}}
+    </div>
+    <div [innerHTML]="operators[operator]">
+    </div>
+    <div>
+        {{number2}}
+    </div>
+    <div>
+        =
+    </div>
+    <div>
+        <button mat-raised-button color="primary" *ngIf="!showAnswer; else answerTpl" (click)="showAnswer = true">answer</button>
+        <ng-template #answerTpl>
+            <span>{{answer}}</span>
+        </ng-template>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="reload()">next</button>
+    </div>
+</div>
