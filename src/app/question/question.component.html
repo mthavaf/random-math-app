@@ -11,7 +11,7 @@
         =
     </div>
     <div>
-        <button mat-raised-button color="primary" *ngIf="!showAnswer; else answerTpl" (click)="showAnswer = true">answer</button>
+        <button mat-raised-button color="primary" *ngIf="!showAnswer; else answerTpl" (click)="showAnswer = true">reveal answer</button>
         <ng-template #answerTpl>
             <span>{{answer}}</span>
         </ng-template>
